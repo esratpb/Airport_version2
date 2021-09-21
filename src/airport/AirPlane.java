@@ -6,7 +6,7 @@ public abstract class AirPlane {
     private boolean isCurrentlyFlying;
     private double speed;
 
-
+//
     public AirPlane(String planeId,  boolean isCurrentlyFlying, double speed) {
         super();
         this.planeId = planeId;
