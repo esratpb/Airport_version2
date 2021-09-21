@@ -4,6 +4,7 @@ public class CargoPlane extends AirPlane {
     private int capacity;  //max capacity is 20 ton
 
 
+
     public void load(int ton){
         if((this.capacity+ton) > 20){           
             System.out.println("CargoPlane "+this.getPlaneId()+" upload "+(20-this.capacity) + " ton, "+ (ton-20)+" do not fit.");
@@ -58,8 +59,10 @@ public class CargoPlane extends AirPlane {
 
 
     //getter setter cons.
+
     public CargoPlane(String planeId, boolean isCurrentlyFlying, int speed) {
         super(planeId,isCurrentlyFlying, speed);
+        this.setAirplaneType("CargoPlane");
     }
 
     
@@ -67,6 +70,7 @@ public class CargoPlane extends AirPlane {
     public CargoPlane(String planeId, boolean isCurrentlyFlying, int speed, int capacity) {
         super(planeId,isCurrentlyFlying, speed);
         this.capacity = capacity;
+        this.setAirplaneType("CargoPlane");
     }
 
     public int getCapacity() {

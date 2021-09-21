@@ -15,9 +15,14 @@ public abstract class AirPlane {
 
     }
 
+    public AirPlane(String airPlaneType) {
+        super();
+        this.airplaneType=airPlaneType;
+    }
 
-    public void land(){}
-    public void takeoff(){}
+//
+//    public void land(){}
+//    public void takeoff(){}
     public void load(int x){ }
     public void unload(int y){}
 
@@ -36,6 +41,9 @@ public abstract class AirPlane {
         return airplaneType;
     }
 
+    public void setAirplaneType(String airplaneType) {
+        this.airplaneType = airplaneType;
+    }
 
     public boolean isCurrentlyFlying() {
         return isCurrentlyFlying;

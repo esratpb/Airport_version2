@@ -20,6 +20,7 @@ public class Application {
         Airport airport1=new Airport("Schiphol",new ArrayList<>());
         airport1.getAirplanes().add(peoplePlane1);
         airport1.getAirplanes().add(cargoPlane);
+        airport1.getAirplanes().add(cargoPlane1);
 
         airport1.allAircraft();
         airport1.notFlyAndHasRoom();
@@ -28,6 +29,7 @@ public class Application {
         airport2.allAircraft();
         airport2.notFlyAndHasRoom();
 
+    airport1.planesByType("CargoPlane");
 
     }
 }

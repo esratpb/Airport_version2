@@ -64,12 +64,14 @@ public class PeoplePlane extends AirPlane {
     //getter setter cons.
     public PeoplePlane(String planeId, boolean isCurrentlyFlying, double speed) {
         super(planeId, isCurrentlyFlying, speed);
+        this.setAirplaneType("PeoplePlane");
     }
 
     public PeoplePlane(String planeId, boolean isCurrentlyFlying, double speed, int maxNumberOfPassenger, int currentNumberOfPassengers) {
         super(planeId, isCurrentlyFlying, speed);
         this.maxNumberOfPassenger = maxNumberOfPassenger;
         this.currentNumberOfPassengers = currentNumberOfPassengers;
+        this.setAirplaneType("PeoplePlane");
     }
 
     public int getMaxNumberOfPassenger() {

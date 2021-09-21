@@ -25,6 +25,17 @@ public class Airport {
         }
         return airPlanes;}
 
+    public List<AirPlane> planesByType(String type){
+        List<AirPlane> planesByTypeList=new ArrayList<>();
+        for(AirPlane airPlane:airPlanes){
+            if (airPlane.getAirplaneType()==type){
+                planesByTypeList.add(airPlane);
+                System.out.print(airPlane.toString()+", ");
+            }
+        }
+        return planesByTypeList;
+    }
+
     public List<AirPlane> notFlyAndHasRoom(){
         List<AirPlane> notFlyHasRoomAirPlane =new ArrayList<>();
         for (AirPlane airPlane :airPlanes){
