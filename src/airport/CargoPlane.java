@@ -4,7 +4,7 @@ public class CargoPlane extends AirPlane {
     private int capacity;  //max capacity is 20 ton
 
 
-
+    @Override
     public void load(int ton){
         if((this.capacity+ton) > 20){           
             System.out.println("CargoPlane "+this.getPlaneId()+" upload "+(20-this.capacity) + " ton, "+ (ton-20)+" do not fit.");
@@ -15,7 +15,7 @@ public class CargoPlane extends AirPlane {
         }
     }
     
-
+    @Override
     public void unload(int ton){
         if(this.capacity<ton){
             System.out.println("CargoPlane "+ this.getPlaneId() +" current ton is less than order("+ton+")"); }

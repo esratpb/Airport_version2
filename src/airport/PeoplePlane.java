@@ -6,7 +6,7 @@ public class PeoplePlane extends AirPlane {
     private int currentNumberOfPassengers;
 
 
-
+    @Override
     public void load(int numberOfPassenger){
         if((this.currentNumberOfPassengers+numberOfPassenger) > this.maxNumberOfPassenger ){
             System.out.println("PeoplePlane "+this.getPlaneId()+" upload "+(this.maxNumberOfPassenger-this.currentNumberOfPassengers) + " passengers, "+ (numberOfPassenger-this.maxNumberOfPassenger)+" do not fit.");
@@ -17,7 +17,7 @@ public class PeoplePlane extends AirPlane {
         }
     }
 
-
+    @Override
     public void unload(int numberOfPassenger){
         if(this.currentNumberOfPassengers<numberOfPassenger){
             System.out.println("PeoplePlane "+ this.getPlaneId() +" current number of passenger is less than order("+numberOfPassenger+")"); }
@@ -78,9 +78,9 @@ public class PeoplePlane extends AirPlane {
         return maxNumberOfPassenger;
     }
 
-    public void setMaxNumberOfPassenger(int maxNumberOfPassenger) {
-        this.maxNumberOfPassenger = maxNumberOfPassenger;
-    }
+//    public void setMaxNumberOfPassenger(int maxNumberOfPassenger) {       //Encapsulation (max number of passenger can not be change
+//        this.maxNumberOfPassenger = maxNumberOfPassenger;
+//    }
 
     public int getCurrentNumberOfPassengers() {
         return currentNumberOfPassengers;

@@ -1,12 +1,12 @@
 package airport;
 
-public abstract class AirPlane {
-    private String planeId;
+public abstract class AirPlane {            //parent class for CargoPlane and PeoplePlane
+    final private String planeId;          //can only be given a value once.
     private String airplaneType;
     private boolean isCurrentlyFlying;
     private double speed;
 
-//
+
     public AirPlane(String planeId,  boolean isCurrentlyFlying, double speed) {
         super();
         this.planeId = planeId;
@@ -15,14 +15,8 @@ public abstract class AirPlane {
 
     }
 
-    public AirPlane(String airPlaneType) {
-        super();
-        this.airplaneType=airPlaneType;
-    }
 
-//
-//    public void land(){}
-//    public void takeoff(){}
+
     public void load(int x){ }
     public void unload(int y){}
 
@@ -33,9 +27,9 @@ public abstract class AirPlane {
         return planeId;
     }
 
-    public void setPlaneId(String planeId) {
-        this.planeId = planeId;
-    }
+//    public void setPlaneId(String planeId) {
+//        this.planeId = planeId;
+//    }
 
     public String getAirplaneType() {
         return airplaneType;
@@ -62,5 +56,5 @@ public abstract class AirPlane {
     }
 
 
-    public abstract boolean notFlyAndHasRoom();
+    public abstract boolean notFlyAndHasRoom();  // come from cargoPlane class and PeoplePlane class.
 }
